@@ -2,6 +2,9 @@
 ## Season 2024/25
 
 ### Table
-|Position|Name|Points|
-|1|Stu|100|
-|2|Jeff|80|
+
+| Position | Name | Points |
+|----------|------|--------|
+| 1        | Stu  | 100    |
+| 2        | Jeff | 80     |
+| 3        | Esme | 60     |
