@@ -12,6 +12,6 @@
 | 6        | [Keefe](/premier-league-predictions/people/keefe)                       | 50     | 
 | 7        | [Matt](/premier-league-predictions/people/matt)                         | 50     | 
 | 8        | [Callum](/premier-league-predictions/people/callum)                     | 50     | 
-| 9        | [Shane](/premier-league-predictions/people/shame)                       | 50     |  
+| 9        | [Shane](/premier-league-predictions/people/shane)                       | 50     |  
 
 *Last updated: 19 August 2024*
