@@ -4,8 +4,8 @@
 
 | Position | Name | Points |
 |----------|------|--------|
-| 1        | Stu  | 100    |
-| 2        | Jeff | 80     |
-| 3        | Esme | 60     |
+| 1        | [Stu](/stu)  | 100    |
+| 2        | [Jeff](/jeff) | 80     |
+| 3        | [Esme](/esme) | 60     |
 
 *Last updated: 19 August 2024*
