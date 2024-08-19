@@ -15,3 +15,14 @@
 | 9        | [Shane](/premier-league-predictions/people/shane)                       | 50     |  
 
 *Last updated: 19 August 2024*
+
+
+### test json table
+
+```json:table
+{
+    "items" : [
+      {"a": "11", "b": "22", "c": "33"},
+      {"a": "211", "c": "233"}
+    ]
+}
