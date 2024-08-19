@@ -5,7 +5,7 @@
 | Position | Name          | Points |
 |----------|---------------|--------|
 | 1        | [Stu](/stu)   | 100    |
-| 2        | [Jeff](/jeff) | 80     |
+| 2        | [Jeff](/premier-league-predictions/jeff) | 80     |
 | 3        | [Esme](/esme) | 60     |
 
 
