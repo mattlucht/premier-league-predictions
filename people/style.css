@@ -6,3 +6,11 @@ th {
     color: navy;
     margin-left: 20px;
   }
+
+  p {
+    color: red;
+}
+
+a {
+    color: blue;
+}
