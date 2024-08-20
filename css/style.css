@@ -80,6 +80,6 @@ tbody tr:nth-child(odd) {
     background-color: #8a8888;
   }
 
-  .stats-table {
+  h2 .stats-table {
     margin-top: 80;
   }
