@@ -40,7 +40,8 @@ html {
   
   thead th,
   tfoot th {
-    font-family: "Rock Salt", cursive;
+    font-family: "helvetica neue", helvetica, arial, sans-serif;
+    font-weight: 800;
   }
   
   th {
