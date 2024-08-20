@@ -79,3 +79,7 @@ tbody tr:nth-child(odd) {
   table {
     background-color: #8a8888;
   }
+
+  .stats-table {
+    margin-top: 80;
+  }
