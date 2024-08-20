@@ -60,3 +60,20 @@ html {
     text-align: right;
   }
   
+  caption {
+    text-align: left;
+  }
+
+  /* zebra striping */
+
+tbody tr:nth-child(odd) {
+    background-color: #81c3f2;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f6ce8e;
+  }
+  
+  table {
+    background-color: #81c3f2;
+  }
