@@ -9,26 +9,6 @@ table {
     border: 3px solid #000000;
   }
   
-  /*
-
-  thead th:nth-child(1) {
-    width: 60%;
-  }
-  
-  thead th:nth-child(2) {
-    width: 40%;
-  }
-  
-
-  thead th:nth-child(3) {
-    width: 15%;
-  }
-  
-  thead th:nth-child(4) {
-    width: 35%;
-  }
-    */
-  
   th,
   td {
     padding: 20px;
@@ -82,4 +62,9 @@ tbody tr:nth-child(odd) {
 
   h2 .stats-table {
     margin-top: 80;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: larger;
   }
