@@ -2,15 +2,42 @@
 <html>
 <head>
     <title>Premier league predictions 2024/25</title>
-    <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/style.css">
-
-<script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
 
 </head>
 
 <h1>Points, week by week</h1>
 
-<iframe width="600" height="371" src="https://docs.google.com/spreadsheets/d/1PgtaYCs3YbeJVML4wPTlz3xZkg-6-bDTeG5rM0kJl0E/pubhtml?gid=1950863696&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+<p>Note: this is best viewed on a laptop or tablet.</p>
+
+<div>
+    <canvas id="myChart"></canvas>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <script>
+    const ctx = document.getElementById('myChart');
+  
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+          label: '# of Votes',
+          data: [12, 19, 3, 5, 2, 3],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+
 
 </html>
