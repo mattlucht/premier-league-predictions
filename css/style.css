@@ -77,3 +77,7 @@ tbody tr:nth-child(odd) {
   h2 .stats-table {
     margin-top: 80;
   }
+
+  table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
+    content: " \25B4\25BE" 
+}
