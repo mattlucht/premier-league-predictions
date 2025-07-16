@@ -23,23 +23,57 @@
         </ul>
     </nav>
 <body>
-    <h1>Premier League Predictions 2025-26</h1>
+<body>
+    <h1>Charlie's predictions</h1>
     <table id="predictions-table" border="1">
         <thead>
             <tr>
-                <th>Position</th>
-                <th>Name</th>
-                <th>Points</th>
+                <th onclick="sortTable(0)">Prediction &#x25B2;&#x25BC;</th>
+                <th>Team</th>
+                <th onclick="sortTable(2)">Points &#x25B2;&#x25BC;</th>
+                <th onclick="sortTable(3)">Position in the Premier League &#x25B2;&#x25BC;</th>
             </tr>
         </thead>
         <tbody>
             <!-- Data will be inserted here -->
         </tbody>
     </table>
+    <script>
+    let sortDirection = [true, true, true]; // true = ascending, false = descending
+
+    function sortTable(colIndex) {
+        const table = document.getElementById('predictions-table');
+        const tbody = table.tBodies[0];
+        const rows = Array.from(tbody.rows);
+
+        rows.sort((a, b) => {
+            let valA = a.cells[colIndex].textContent.trim();
+            let valB = b.cells[colIndex].textContent.trim();
+
+            // Try to compare as numbers, fallback to string
+            const numA = parseFloat(valA);
+            const numB = parseFloat(valB);
+            if (!isNaN(numA) && !isNaN(numB)) {
+                valA = numA;
+                valB = numB;
+            }
+
+            if (valA < valB) return sortDirection[colIndex] ? -1 : 1;
+            if (valA > valB) return sortDirection[colIndex] ? 1 : -1;
+            return 0;
+        });
+
+        // Toggle sort direction for next click
+        sortDirection[colIndex] = !sortDirection[colIndex];
+
+        // Re-append sorted rows
+        rows.forEach(row => tbody.appendChild(row));
+    }
+    </script>
 
     <script>
     const sheetId = '1PgtaYCs3YbeJVML4wPTlz3xZkg-6-bDTeG5rM0kJl0E';
-    const sheetName = 'leader-board-2026';
+    const sheetName = 'charlie-2025-26';
     const apiKey = 'AIzaSyCX6VFjtTWpKVZbPKUyicA2KhM5xpZr5QM';
 
     fetch(`https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetName}?key=${apiKey}`)
@@ -61,18 +95,5 @@
             console.error('Error fetching data:', error);
         });
     </script>
-    
-    <h2>Rules</h2>
-    
-    <li><strong>10 points:</strong> if you predict the winner of the Premier League</li>
-    <li><strong>5 points:</strong> for each team you correctly predict in places 2nd to 20th</li>
-    <li><strong>-1 point:</strong> for each place you incorrectly predict a team's place by</li>
-
-    <h2>Previous winners</h2>
-    <li>2024/25 – Jeff (-27 points)</li>
-    <li>2023/24 – Stu (-10 points))</li>
-    <li>2022/23 – Matt (-36 points)</li>
-    <li>2021/22 – Josh (-33 points)</li>
-
 </body>
 </html>
