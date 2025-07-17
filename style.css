@@ -32,3 +32,53 @@ tr:nth-child(even) {
 tr:hover {
     background: #e6f7ff;
 }
+
+/* Responsive nav styles */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: #003366;
+    padding: 10px 16px;
+    margin-bottom: 24px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 12px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+nav a:hover,
+nav a:focus {
+    background: #00509e;
+}
+
+@media (max-width: 700px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    nav li {
+        margin: 8px 0;
+    }
+}
