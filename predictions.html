@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Material Icon CDN -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Premier League Predictions</title>
+</head>
+
+<body>
+    <nav>
+    
+    </nav>
+
+<!-- material icons CDN in the head section, see the html settings 👆-->
+  <ul class="menu">
+    <li><a class="menuItem" href="index.html">Home</a></li>
+    <li><a class="menuItem" href="predictions.html">Predictions</a></li>
+  </ul>
+  <button class="hamburger">
+    <!-- material icons https://material.io/resources/icons/ -->
+    <i class="menuIcon material-icons">menu</i>
+    <i class="closeIcon material-icons">close</i>
+  </button>
+
+  <script>
+
+const menu = document.querySelector(".menu");
+const menuItems = document.querySelectorAll(".menuItem");
+const hamburger= document.querySelector(".hamburger");
+const closeIcon= document.querySelector(".closeIcon");
+const menuIcon = document.querySelector(".menuIcon");
+
+function toggleMenu() {
+  if (menu.classList.contains("showMenu")) {
+    menu.classList.remove("showMenu");
+    closeIcon.style.display = "none";
+    menuIcon.style.display = "block";
+  } else {
+    menu.classList.add("showMenu");
+    closeIcon.style.display = "block";
+    menuIcon.style.display = "none";
+  }
+}
+
+hamburger.addEventListener("click", toggleMenu);
+
+menuItems.forEach( 
+  function(menuItem) { 
+    menuItem.addEventListener("click", toggleMenu);
+  }
+)
+</script>
+
+
+<body>
+    <h1>Premier League Predictions 2025-26</h1>
+
+    <ul>
+    <li><a href="callum.html">Callum</a></li>
+    <li><a href="charlie.html">Charlie</a></li>
+    <li><a href="chris.html">Chris</a></li>
+    <li><a href="dave.html">Dave</a></li>
+    <li><a href="esme.html">Esme</a></li>
+    <li><a href="gary.html">Gary</a></li>
+    <li><a href="geoffrey.html">Geoffrey</a></li>
+    <li><a href="jack.html">Jack</a></li>
+    <li><a href="jay.html">Jay</a></li>
+    <li><a href="jeff.html">Jeff</a></li>
+    <li><a href="josh.html">Josh</a></li>
+    <li><a href="keefe.html">Keefe</a></li>
+    <li><a href="matt.html">Matt</a></li>
+    <li><a href="max.html">Max</a></li>
+    <li><a href="morgan.html">Morgan</a></li>
+    <li><a href="sean.html">Sean</a></li>
+    <li><a href="shaka.html">Shaka</a></li>
+    <li><a href="shane.html">Shane</a></li>
+    <li><a href="shaun.html">Shaun</a></li>
+    <li><a href="stu.html">Stu</a></li>
+    </ul>
+
+</body>
+</html>
