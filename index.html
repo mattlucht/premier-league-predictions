@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Material Icon CDN -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Premier League Predictions</title>
 </head>
+
 <body>
     <nav>
        <!-- <ul style="display: flex; gap: 1rem; list-style: none; padding: 1rem 0; margin: 0;">
@@ -24,15 +27,47 @@
     -->
     </nav>
 
-<div class="a-header">
-		<input type="checkbox" name="main-nav" id="main-nav" class="burger-check">
-		<label for="main-nav" class="burger menu"><span></span></label>
-		<ul>
-				<li><a href="#">Lorem</a></li>
-				<li><a href="#" class="active">Aliquam</a></li>
-				<li><a href="#">Vestibulum</a></li>
-		</ul>
-</div>
+       <!-- material icons CDN in the head section, see the html settings 👆-->
+  <ul class="menu">
+    <li><a class="menuItem" href="#">Home</a></li>
+    <li><a class="menuItem" href="#">About</a></li>
+  </ul>
+  <button class="hamburger">
+    <!-- material icons https://material.io/resources/icons/ -->
+    <i class="menuIcon material-icons">menu</i>
+    <i class="closeIcon material-icons">close</i>
+  </button>
+
+  <script>
+
+
+const menu = document.querySelector(".menu");
+const menuItems = document.querySelectorAll(".menuItem");
+const hamburger= document.querySelector(".hamburger");
+const closeIcon= document.querySelector(".closeIcon");
+const menuIcon = document.querySelector(".menuIcon");
+
+function toggleMenu() {
+  if (menu.classList.contains("showMenu")) {
+    menu.classList.remove("showMenu");
+    closeIcon.style.display = "none";
+    menuIcon.style.display = "block";
+  } else {
+    menu.classList.add("showMenu");
+    closeIcon.style.display = "block";
+    menuIcon.style.display = "none";
+  }
+}
+
+hamburger.addEventListener("click", toggleMenu);
+
+menuItems.forEach( 
+  function(menuItem) { 
+    menuItem.addEventListener("click", toggleMenu);
+  }
+)
+</script>
+
 
 <body>
     <h1>Premier League Predictions 2025-26</h1>
