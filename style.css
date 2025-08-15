@@ -33,8 +33,6 @@ tr:hover {
     background: #e6f7ff;
 }
 
-/*
-
  Responsive nav styles
 nav {
     display: flex;
@@ -83,41 +81,4 @@ nav a:focus {
     nav li {
         margin: 8px 0;
     }
-}
-
-*/
-
-nav {
-  padding: 1.5rem 2rem;
-  background-color: #222831;
-  color: #fff;
-}
-
-.checkbtn{
-  font-size: 1.5rem;
-  color: white;
-  cursor: pointer;
-}
-
-#check{
-  display: none;
-}
-
-#check:checked ~ .nav-mobile{display: block;}
-
-.nav-mobile {
-  display: none;
-  position: absolute;
-  top: 4.5rem;
-  left: 0;
-  overflow: hidden;
-  background: #222831;
-  z-index: 1;
-  width: 200px;
-}
-
-.nav-mobile a {
-  color: #fff;
-  padding: 1rem 1.5rem;
-  display: block;
 }
