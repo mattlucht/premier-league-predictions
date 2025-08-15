@@ -240,7 +240,7 @@ span.boo {
 
 /*==============================================================================
  Simple mobile menu opening and closing (IE9 or higher)
-==============================================================================*/
+==============================================================================
 .a-header {
 		position: relative;
 		float: left;
@@ -281,6 +281,8 @@ span.boo {
 		background: #fff;
 		border-bottom-color: #08c;
 }
+
+*/
 
 /* Animate height of 'a' element in order to reveal the menu on check (IE9 or higher) */
 #main-nav:checked ~ ul a {
