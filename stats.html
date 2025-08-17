@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Material Icon CDN -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Premier League Predictions</title>
+</head>
+
+<body>
+    <nav>
+    
+    </nav>
+
+<!-- material icons CDN in the head section, see the html settings 👆-->
+  <ul class="menu">
+    <li><a class="menuItem" href="index.html">Home</a></li>
+    <li><a class="menuItem" href="predictions.html">Predictions</a></li>
+    <li><a class="menuItem" href="premier-league-table.html">Premier league table</a></li>
+  </ul>
+  <button class="hamburger">
+    <!-- material icons https://material.io/resources/icons/ -->
+    <i class="menuIcon material-icons">menu</i>
+    <i class="closeIcon material-icons">close</i>
+  </button>
+
+  <script>
+
+
+const menu = document.querySelector(".menu");
+const menuItems = document.querySelectorAll(".menuItem");
+const hamburger= document.querySelector(".hamburger");
+const closeIcon= document.querySelector(".closeIcon");
+const menuIcon = document.querySelector(".menuIcon");
+
+function toggleMenu() {
+  if (menu.classList.contains("showMenu")) {
+    menu.classList.remove("showMenu");
+    closeIcon.style.display = "none";
+    menuIcon.style.display = "block";
+  } else {
+    menu.classList.add("showMenu");
+    closeIcon.style.display = "block";
+    menuIcon.style.display = "none";
+  }
+}
+
+hamburger.addEventListener("click", toggleMenu);
+
+menuItems.forEach( 
+  function(menuItem) { 
+    menuItem.addEventListener("click", toggleMenu);
+  }
+)
+</script>
+
+
+<body>
+    <h1>2025-26 – prediction stats</h1>
+    <table id="predictions-table" border="1">
+        <thead>
+            <tr>
+                <th>Team</th>
+                <th onclick="sortTable(0)">Avg. &#x25B2;&#x25BC;</th>
+                <th onclick="sortTable(0)">Highest &#x25B2;&#x25BC;</th>
+                <th onclick="sortTable(0)">Lowest &#x25B2;&#x25BC;</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be inserted here -->
+        </tbody>
+    </table>
+
+    <script>
+    const sheetId = '1PgtaYCs3YbeJVML4wPTlz3xZkg-6-bDTeG5rM0kJl0E';
+    const sheetName = '2026-stats-display';
+    const apiKey = 'AIzaSyCX6VFjtTWpKVZbPKUyicA2KhM5xpZr5QM';
+
+    fetch(`https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetName}?key=${apiKey}`)
+        .then(response => response.json())
+        .then(data => {
+            const rows = data.values;
+            const tbody = document.querySelector('#predictions-table tbody');
+            rows.slice(1).forEach(row => {
+                const tr = document.createElement('tr');
+                row.forEach(cell => {
+                    const td = document.createElement('td');
+                    td.textContent = cell;
+                    tr.appendChild(td);
+                });
+                tbody.appendChild(tr);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+    </script>
+    
+    <h2>Rules</h2>
+    
+    <li><strong>10 points:</strong> if you predict the winner of the Premier League</li>
+    <li><strong>5 points:</strong> for each team you correctly predict in places 2nd to 20th</li>
+    <li><strong>-1 point:</strong> for each place you incorrectly predict a team's place by</li>
+
+    <h2>Previous winners</h2>
+    <li>2024/25 – Jeff (-27 points)</li>
+    <li>2023/24 – Stu (-10 points))</li>
+    <li>2022/23 – Matt (-36 points)</li>
+    <li>2021/22 – Josh (-33 points)</li>
+
+</body>
+</html>
