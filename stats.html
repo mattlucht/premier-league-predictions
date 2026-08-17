@@ -112,7 +112,7 @@ menuItems.forEach(
     const sheetName = '2026-stats-display';
     const apiKey = 'AIzaSyCX6VFjtTWpKVZbPKUyicA2KhM5xpZr5QM';
 
-    fetch(`https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetName}?key=${apiKey}`)
+    fetch(`https://docs.google.com/spreadsheets/d/e/2PACX-1vRwD5j_VkFN-RiJkeLl01VcfO-rkVXDHIa45NPARdAYFlXnZwFF6PoggHfLvN_yHMokZbcZ_BNjQIJF/pub?gid=891359592&single=true&output=csv`)
         .then(response => response.json())
         .then(data => {
             const rows = data.values;
